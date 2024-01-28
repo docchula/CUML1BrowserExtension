@@ -1,7 +1,7 @@
 ## Feature List
-- [ ] Convert to and from CUML1
-- [ ] Website compatibility checks
-- [ ] Dark mode
+- [x] Convert to and from CUML1
+- [x] Website compatibility checks
+- [x] Dark mode
 
 # Manual Installation
 **To load an unpacked extension in developer mode** [[source](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked)]
