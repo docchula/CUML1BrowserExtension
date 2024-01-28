@@ -1,0 +1,148 @@
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a, 
+a:visited {
+    color: #00E;
+}
+
+.darkmode a,
+.darkmode a:visited {
+    color: #90c0fe;
+}
+
+button {
+    text-wrap: nowrap;
+    width: 100%;
+}
+
+hr {
+    margin: 6px 0 4px;
+}
+
+#headerStack {
+    margin-bottom: 0.5em;
+}
+
+#headerStack h1,
+#headerStack p {
+    text-wrap: nowrap;
+    text-align: center;
+    margin: 0;
+}
+
+#headerStack h1 img {
+    width: 48px;
+    height: 48px;
+    vertical-align: middle;
+}
+
+#buttonStack,
+#compatStack {
+    text-align: center;
+}
+
+.compat-confirm {
+    color: #228B22;
+}
+
+.darkmode .compat-confirm {
+    color: #33CC33;
+}
+
+.compat-error {
+    color: #FF4500;
+}
+
+#contact {
+    text-align: right;
+    font-size: 0.8em;
+}
+
+#contact hr {
+    margin-bottom: 1px;
+}
+
+/* ===== Dark mode ===== */
+.darkmode {
+    background-color: black;
+    color: white;
+}
+
+.animated {
+    -webkit-transition-property: background-color, color;
+    transition-property: background-color, color;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+}
+
+/* ===== Dark mode switch ===== */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    width: 30px;
+    height: 15px;
+    float: left;
+    margin-bottom: 8px; /* if there's no footer text */
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    display: none;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 15px;
+    
+    background-image: url(./img/sun.svg), url(./img/moon.svg);
+    background-position: 2px center, calc(100% - 2px) center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 12px 12px, 12px 12px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 2px;
+    bottom: 1.5px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.slider.deanimated:before {
+    -webkit-transition: 0s;
+    transition: 0s;
+}
+
+input:checked + .slider {
+    background-color: #666;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(14px);
+    -ms-transform: translateX(14px);
+    transform: translateX(14px);
+}
