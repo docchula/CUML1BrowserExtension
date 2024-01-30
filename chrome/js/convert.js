@@ -14,11 +14,11 @@ if (tabInfo.url.indexOf("cuml1.md.chula.ac.th") !== -1) {
     compatChecked = true
     convertButton.disabled = true;
     convertButton.className = "compat-error";
-    convertButton.innerHTML = "link is already in CUML1";
+    convertButton.textContent = "link is already in CUML1";
 
     const buttonStack = document.querySelector('#buttonStack');
     const convertBack = document.createElement('button');
-    convertBack.innerHTML = "convert back to normal link"
+    convertBack.textContent = "convert back to normal link"
     convertBack.addEventListener('click', async () => {
         let newURL = await convertFromCUML1(link);
         if (newURL.split('/')[2] === "login") newURL = "https://www.google.com"; // special case for CUML1 homepage
@@ -39,7 +39,7 @@ if (compatChecked === false) {
         if (link.indexOf(item) !== -1) {
             compatChecked = true;
             compatStatus.className = "compat-confirm";
-            compatStatus.innerHTML = "✅ compatible";
+            compatStatus.textContent = "✅ compatible";
             break;
         }
     }
@@ -49,9 +49,9 @@ if (compatChecked === false) {
     for (let item of blacklist) {
         if (link.indexOf(item) !== -1) {
             compatChecked = true;
-            convertButton.innerHTML = "proceed with caution";
+            convertButton.textContent = "proceed with caution";
             compatStatus.className = "compat-error";
-            compatStatus.innerHTML = "❌ incompatible";
+            compatStatus.textContent = "❌ incompatible";
             break;
         }
     }
