@@ -3,6 +3,11 @@
 - [x] Website compatibility checks
 - [x] Dark mode
 
+## To Do List
+- [ ] Extension on Firefox
+- [ ] Extension on Safari?
+- [ ] Publish this on browser web stores
+
 # Manual Installation
 **To load an unpacked extension in developer mode** [[source](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked)]
 1. Go to the Extensions page by entering `chrome://extensions` in a new tab. (By design `chrome://` URLs are not linkable.)
