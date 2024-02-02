@@ -13,11 +13,11 @@ chrome.storage.sync.get('darkmode', (data) => {
         setTimeout(() => {
             slider.classList.remove("deanimated");
             body.classList.add("animated");
-            document.querySelector('a').classList.add("animated");
+            // document.querySelector('a').classList.add("animated");
         }, 500); // css animation 0.5 sec
     } else {
         body.classList.add("animated");
-        document.querySelector('a').classList.add("animated");
+        // document.querySelector('a').classList.add("animated");
     }
 });
 
