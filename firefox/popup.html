@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv = "X-UA-Compatible" content = "IE = edge" />
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
+        <link rel = "stylesheet" href = "./popup.css" />
+    </head>
+    
+    <body>
+        <div id = "headerStack">
+            <h1>
+                <img src = "./img/mdcu-logo.png" />
+                CUML1
+            </h1>
+            <p>MDCU off-campus access</p>
+        </div>
+        
+        <div id = "buttonStack">
+            <button id = "convert">convert link to CUML1</button>
+        </div>
+
+        <div id = "compatStack">
+            <hr />
+            <p><b>compatibility status</b></p>
+            <p id = "status" class = "compat-unknown">❔ no information</p>
+        </div>
+
+        <div id = "footerStack">
+            <hr />
+            <label class = "switch">
+                <input id = "darkmode" type = "checkbox">
+                <span class = "slider"></span>
+            </label>
+            <p style = "text-align: right;">
+                <!-- <a href="https://docchula.com/" target="_blank" tabindex="-1">contact</a> -->
+            </p>
+        </div>
+
+        <script src = "./js/darkmode.js" type = "module"></script>
+        <script src = "./js/compatibility.js" type = "module"></script>
+        <script src = "./js/convert.js" type = "module"></script>
+    </body>
+</html>

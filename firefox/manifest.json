@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "CUML1 converter",
+    "version": "1.0.0",
+    "description": "Convert to and from MDCU off-campus access URLs",
+    "icons": {
+        "16": "./img/icon.png"
+    },
+    "action": {
+        "default_popup": "./popup.html",
+        "default_icon": "./img/icon.png"
+    },
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "cuml1-access@docchula"
+        }
+    }
+}

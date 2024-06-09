@@ -4,7 +4,7 @@
 - [x] Dark mode
 
 ## To Do List
-- [ ] Extension on Firefox
+- [x] Extension on Firefox
 - [ ] Extension on Safari?
 - [ ] Publish this on browser web stores
 
