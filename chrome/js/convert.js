@@ -15,7 +15,8 @@ if (tabInfo.url.indexOf("cuml1.md.chula.ac.th") !== -1) {
     convertBack.textContent = "convert back to normal link"
     convertBack.addEventListener('click', async () => {
         let newURL = await convertFromCUML1(link);
-        if (newURL.split('/')[2] === "login") newURL = "https://www.google.com"; // special case for CUML1 homepage
+        if (newURL.split('/')[2] === "login") newURL = "chrome://newtab"; // special case for CUML1 homepage
+
         await chrome.tabs.update({ url: newURL });
     });
     buttonStack.append(convertBack);
@@ -24,6 +25,8 @@ if (tabInfo.url.indexOf("cuml1.md.chula.ac.th") !== -1) {
 } else {
     convertButton.addEventListener('click', async () => {
         let newURL = await convertToCUML1(link);
+        if (newURL.split('/')[0] === "chrome:") newURL = "https://cuml1.md.chula.ac.th/"; // special case for chrome tabs
+        
         await chrome.tabs.update({ url: newURL });
     });
 }

@@ -2,7 +2,7 @@
 
 const whitelist = [ "doi.org", "elsevier.com", "www.google.com", "library.md.chula.ac.th", "lww.com", 
     "mhmedical.com", "sagepub.com", "sciencedirect.com", "springer.com", "tandfonline.com", "onlinelibrary.wiley.com" ];
-const blacklist = [ "ajpmonline.org", "chrome://", "google.com", "jahonline.org", "jsad.com", "w3schools.com", "youtube.com" ];
+const blacklist = [ "ajpmonline.org", "google.com", "jahonline.org", "jsad.com", "w3schools.com", "youtube.com" ];
 
 const tabInfo = await getCurrentTab();
 const link = tabInfo.url;
