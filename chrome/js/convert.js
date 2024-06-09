@@ -3,25 +3,24 @@
 const tabInfo = await getCurrentTab();
 const link = tabInfo.url;
 const convertButton = document.querySelector('#convert');
-// const compatStatus = document.querySelector('#status');
 
 if (tabInfo.url.indexOf("cuml1.md.chula.ac.th") !== -1) {
-    convertButton.disabled = true;
-    convertButton.className = "compat-error";
-    convertButton.textContent = "link is already in CUML1";
+    const headerStack = document.querySelector('#headerStack');
+    const inCUML1 = document.createElement('p');
+    inCUML1.id = "inCUML1";
+    inCUML1.textContent = "you're already in CUML1";
+    headerStack.append(inCUML1);
 
-    const buttonStack = document.querySelector('#buttonStack');
-    const convertBack = document.createElement('button');
-    convertBack.textContent = "convert back to normal link"
-    convertBack.addEventListener('click', async () => {
+    convertButton.textContent = "go back to normal link"
+    
+    document.querySelector("#compatStack").remove();
+
+    convertButton.addEventListener('click', async () => {
         let newURL = await convertFromCUML1(link);
         if (newURL.split('/')[2] === "login") newURL = "chrome://newtab"; // special case for CUML1 homepage
 
         await chrome.tabs.update({ url: newURL });
     });
-    buttonStack.append(convertBack);
-
-    document.querySelector("#compatStack").remove();
 } else {
     convertButton.addEventListener('click', async () => {
         let newURL = await convertToCUML1(link);

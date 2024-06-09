@@ -46,6 +46,12 @@ hr {
     vertical-align: middle;
 }
 
+#inCUML1 {
+    font-size: 13px;
+    font-weight: bold;
+    color: #FF4500;
+}
+
 #buttonStack,
 #compatStack {
     text-align: center;
